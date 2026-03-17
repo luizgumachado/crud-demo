@@ -14,7 +14,7 @@ mat-card {
     padding: 1em;
 }
 
-.form-body {
+mat-card-content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -24,4 +24,13 @@ mat-card {
 
 mat-form-field {
     width: 100%;
+}
+
+.sm-form-field {
+    width: 50%;
+}
+
+mat-card-actions {
+    padding-left: 1em;
+    gap: 1em;
 }

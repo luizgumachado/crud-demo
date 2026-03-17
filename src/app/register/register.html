@@ -1,22 +1,45 @@
 <div class="register-container">
     <div class="form-container">
-        <form #registerForm="ngForm">
+        <form #registerForm="ngForm" (ngSubmit)="save()">
             <mat-card>
                 <mat-card-header>
                     <mat-card-title>Register</mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                    <div class="form-body">
                         <mat-form-field>
                             <mat-label>Name: *</mat-label>
-                            <input type="text" placeholder="Insert name..." matInput>
+                            <input type="text" placeholder="Example: John Doe Smith." [(ngModel)]="customer.name" name="name" matInput>
                         </mat-form-field>
+                        
                         <mat-form-field>
-                            <mat-label>CPF: *</mat-label>
-                            <input type="text" placeholder="Insert CPF..." matInput>
+                            <mat-label>Email: *</mat-label>
+                            <input type="text" placeholder="Example: johndoe@email.com" [(ngModel)]="customer.email" name="email" matInput>
                         </mat-form-field>
-                    </div>
+
+                        <mat-form-field class="sm-form-field">
+                            <mat-label>CPF: *</mat-label>
+                            <input type="text" placeholder="Example: 123.456.789-00" [(ngModel)]="customer.cpf" name="cpf" matInput>
+                        </mat-form-field>
+
+                        <mat-form-field class="sm-form-field">
+                            <mat-label>Birth Date: *</mat-label>
+                            <input type="date" name="birth-date" id="birth-date" [(ngModel)]="customer.birthDate" name="birthDate" matInput>
+                        </mat-form-field>
                 </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" type="submit">
+                        <mat-icon fontIcon="save"></mat-icon>
+                        Save
+                    </button>
+                    <button mat-flat-button color="primary">
+                        <mat-icon fontIcon="refresh"></mat-icon>
+                        Update
+                    </button>
+                    <button mat-flat-button color="accent">
+                        <mat-icon fontIcon="backspace"></mat-icon>
+                        Clear
+                    </button>
+                </mat-card-actions>
             </mat-card>
         </form>
     </div>
