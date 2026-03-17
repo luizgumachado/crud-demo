@@ -1,0 +1,27 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    min-width: 600px;
+    max-width: 1000px;
+    margin-top: 40px;
+    padding: 35px;
+}
+
+mat-card {
+    padding: 1em;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: .5em;
+    margin-top: 20px;
+}
+
+mat-form-field {
+    width: 100%;
+}

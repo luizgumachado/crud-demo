@@ -1,0 +1,21 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.nav-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: .1s;
+
+    &:hover {
+        transform: scale(1.02);
+        text-decoration: underline;
+    }
+}
